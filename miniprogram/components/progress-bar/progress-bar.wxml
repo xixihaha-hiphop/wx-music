@@ -1,0 +1,18 @@
+<view class="container">
+  <!-- 当前播放的时间 -->
+  <text class="time">{{showTime.currentTime}}</text>
+  <!-- 可拖拽的进度条 -->
+  <view class="control">
+    <movable-area class="movable-area">
+      <movable-view direction="horizontal" class="movable-view"
+        damping="1000" x="{{movableDis}}" bindchange="onChange"
+        bindtouchend="onTouchEnd"
+      />
+    </movable-area>
+    <!-- 当前进度的颜色 -->
+    <progress stroke-width="4" backgroundColor="#969696"
+    activeColor="#fff" percent="{{progress}}"></progress>
+  </view>
+  <!-- 歌曲总时长 -->
+  <text class="time">{{showTime.totalTime}}</text>
+</view>
